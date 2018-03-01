@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="A summary of HTML principles.">
+    <meta http-equiv="author" content="Tony Daltorio">
+    <!--See more about the viewport attribute if you ever code for mobile devices-->
+    <title>HTML 101</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--goals: learn to create a drop-down with links to the different sections.
+    Make the text fade as I scroll up, so that only HTML stays-->
+    <h1><img src="Images/html_messy.png" height="170" alt="HTML" id="top"></h1>
+    <main role="main">
+    <article role="article">
+    <dl>
+        <section>
+        <dt>Elements</dt>
+          <dd>A tag and content, like this: &lt;p&gt;This is an element&lt;&sol;p&gt;. Elements can either be block-level, or inline. A block-level element, <q cite="https://www.w3schools.com/html/html_blocks.asp">always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can). </q>Some examples include &lt;p&gt;,&lt;H1-6&gt;&lt;div&gt;,&lt;ul&gt;.<br><br>
+          An inline element <q cite="https://www.w3schools.com/html/html_blocks.asp">does not start on a new line and only takes up as much width as necessary.</q> Some examples include &lt;a&gt; and &lt;img&gt;.
+          </dd>
+        </section>
+        <section>
+        <dt>Attributes</dt>
+          <dd>Attributes <q cite="https://www.amazon.com/HTML-CSS-Design-Build-Websites/dp/1118008189/ref=sr_1_1?ie=UTF8&qid=1510885175&sr=8-1&keywords=html+and+css">provide additional information about the contents of an element.</q> They are made up of a <b>name</b> and a <b>value</b>. For example, the anchor tag (&lt;a&gt;) has an href attribute, where &ldquo;href&rdquo; is the name, and the link is the value. This <a href="https://www.w3schools.com/html/html_attributes.asp" title="HTML Attributes" target="_blank">website</a> explains nicely.</dd>
+        </section>
+        <section>
+        <dt>Lists</dt>
+          <dd>There are three types of lists:
+            <ol>
+              <li>Ordered lists, or &lt;ol&gt;, like this one.</li>
+              <li>Unordered lists, or &lt;ul&gt;, which will create bullet points. Both of these use &lt;li&gt; tag to display the list items.</li>
+              <li>Definition Lists. These use &lt;dl&gt; as the parent tag, and then &lt;dt&gt; for the definition term and &lt;dd&gt; for the definition definition (this entire site was created as a definition list).
+                <ul>
+                  <li>You can also nest lists, like so.</li>
+                </ul>
+              </li>
+            </ol>
+
+        </section>
+        <section>
+        <dt>Named Character Entities (aka Escape Characters)</dt>
+          <dd>Certain characters (such as &lt;) mean something in html, so you type in &amp;&nbsp;(entity); and it replaces it with that symbol. Full list <a href="https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references" title="Named Character entity lisy" target="_blank">here</a>. A few examples below:
+              <table border="1">
+                  <!--column one is the character, and column two is the named character entity-->
+                  <tr>
+                      <th class="tabHead">Character</th>
+                      <th class="tabHead">Named Character Entity</th>
+                  </tr>
+                  <tr>
+                      <th>&copy;</th>
+                      <th>&amp;copy;</th>
+                  </tr>
+                  <tr>
+                      <th>&amp;</th>
+                      <th>&amp;amp;</th>
+                  </tr>
+                  <tr>
+                      <th>&lt;</th>
+                      <th>&amp;lt;</th>
+                  </tr>
+                      <th>&gt;</th>
+                      <th>&amp;gt;</th>
+                  <tr>
+                      <th>&rsquo;</th>
+                      <th>&amp;rsquo;</th>
+                  </tr>
+                  <tr>
+                      <th>&lsquo;</th>
+                      <th>&amp;lsquo;</th>
+                  </tr>
+                  <tr>
+                      <th>&rdquo;</th>
+                      <th>&amp;rdquo;</th>
+                  </tr>
+                  <tr>
+                      <th>&ldquo;</th>
+                      <th>&amp;ldquo;</th>
+                  </tr>
+                  <tr>
+                      <th>&quot;</th>
+                      <th>&amp;quot;</th>
+                  </tr>
+                  <tr>
+                      <th>(white space)</th>
+                      <th>&amp;nbsp;</th>
+                  </tr>
+                   <tr>
+                      <th>&equals;</th>
+                      <th>&amp;equals;</th>
+                  </tr>
+                  <tr>
+                      <th>&sol;</th>
+                      <th>&amp;sol;</th>
+                  </tr>
+
+              </table>
+          </dd>
+        </section>
+        <section>
+        <dt>Headers</dt>
+        <dd>Although headers decrease in size, they should be used to denote importance with &lt;H1&gt; being the most important, and &lt;H6&gt; being the least.</dd>
+        </section>
+        <section>
+        <dt>Adding Emphasis</dt>
+        <dd>There are two ways to bold or italicize: (1) If you are writing stylistically, use &lt;b&gt; or &lt;i&gt; (2) If you are trying to convey importance, or writing logically, use &lt;em&gt; or &lt;strong&gt;.</dd>
+        </section>
+        <section>
+        <dt>The HTML Sandwich</dt>
+        <dd>At the top will always be your doctype declaration (ex:&lt;!doctype html&gt;), but then after that comes the . . .
+            <ol>
+                <li>Bread: &lt;html&nbsp;lang=&quot;en&quot;&gt; (entire document) &lt;&sol;html&gt;</li>
+                <li>Condements: &lt;head&gt;(invisible elements such as title, stylesheets, and meta tags)&lt;&sol;head&gt;</li>
+                <li>Meat: &lt;body&gt;(visible content such as headers, tables, paragraphs, lists, or <a href="Images/VanGogh.jpg" download title="Van Gogh Painting">Van Gogh Paintings</a>)&lt;&sol;body&gt;</li>
+            </ol>
+        </dd>
+        </section>
+        <section>
+        <dt>Commenting</dt>
+        <dd>To comment in html, write &lt;!&ndash;&nbsp;&ndash;whatever you want to comment out&ndash;&nbsp;&ndash;&gt;<br>The coolest part about comments is that you can comment out entire sections of code, essentially turning it into an on&sol;off switch.</dd>
+        </section>
+        <section>
+        <dt>Directories</dt>
+        <dd>&rdquo;Directory&ldquo; is just a fancy word for folder. Your main site will live within the main, or <i>root</i> folder, and the homepage will always be titled index.html.<br />
+        With photos and relative links, you need to point to where it lives in the directory. To go up one directory, type &quot;. . &sol;&quot; To go down a directory, simply type &quot;&sol;&quot;
+        </dd>
+        </section>
+        <section>
+        <dt>Links</dt>
+        <dd>To create a link, use the &lt;a&gt;, or anchor, tag. What is sandwiched in between the tags is the link name that the user sees. The &quot;href,&quot; or hypertext reference, is what the link will then link to. Link types:
+            <ul>
+                <li>Fragment identifiers: Linking to sections within your document. For example: <a href="#top" title="Back to the top">Top of the Page</a></li>
+                <li>External Links: Linking to outside pages, such as <a href="http://heeeeeeeey.com" title="random website" target="_blank">heeeeeey</a></li>
+                <li>Internal Links: Linking to sections within your own site, like <a href="../Borat Site/BoratSite.html" title="Borat Site" target="_blank">this</a>, or even specific sections within <i>that</i> site, like <a href="../Borat%20Site/BoratSite.html#hi" title="Bottom of Borat Page" target="_blank">this</a>. The URLs in these links are called relative URLs rather than absolute URLs</li>
+                <li>Downloadable Content: Linking to a downloadable file, like this <a href="../Find%20This%20Directory/Dun_dun_DUN/teags.jpg" title="Picture of Teags" download>picture of Teags</a></li>
+                <li>You can e-mail me <a href="mailto:adaltorio100@yahoo.com" title="adaltorio100@yahoo.com">here</a>.</li>
+            </ul>
+        </dd>
+        </section>
+        <section>
+        <dt>Images</dt>
+        <dd>
+          <p>Adding images is easy peezy, but make sure to add the boring stuff, like this: &lt;img src&equals;&quot;.. &sol;funny_pics&sol;banana_peel&quot; height&equals;&quot;200&quot; width&equals;&quot;200&quot; alt&equals;&quot;Guy slipping on banana peel.&quot title&equals;&ldquo;The oldest prank in the book&rdquo;&gt;You can also add height and width in CSS. This is for when the page loads before the picture. That way, the text will be structured correctly. The image should also fit the color palette of the page.
+
+          <a href="https://www.youtube.com/watch?v=dVmDRURYG9w" target="_blank"><img src="Images/JustGuy.png" height="150" width="300" alt="dude slipping on banana peel" title="The oldest prank in the book" class = "floatRight"></a><br /><br />
+
+          You can also get fancy and float the image to the left or the right. In this example, I've floated it right. In the img element, I added &ldquo;class&equals;floatRight,&rdquo; and then in my CSS I wrote .floatRight &lbrace;float:right; margin:20px;&rbrace;</p>
+
+          <p>Also, this picture used to have a white border, but it looked way cooler without it. To take away the border, you have to cut it out in Photoshop and then save it as a .png. Saving it as a jpeg will not do the trick (by the way, &ldquo;.png&rdquo; is an extension. This is the suffix that goes after a file name to denote what type of file it is. The extension for an html file is either &ldquo;.html&rdquo; or &ldquo;.htm.&rdquo;).</p>
+
+          <p>Images are considered replaced content because they replace the element with the asset that is being referenced. Also, go ahead and hover over this. That's done using the title attribute, and what you are seeing is called the tooltip. This gives additional info about the picture. You also always want to include the alt attribute in case the picture doesn't load. If there's no meaning to the picture, and it's just decoration, still use alt, but just leave the quotes empty.</p>
+
+          <p>It's not a bad idea to create an images folder. If you have lots of photos, make subfolders of the categories.
+
+          <p>Use a JPEG for any picture that has lots of colors. Use GIF for things like logos, where there are few colors or large areas of the same color. NOT for snow, sky, or grass. Save photos in the same dimensions as you'll use them. Portraits are taller than wide, and landscapes are wider than tall. ALWAYS work in pixels rather than inches. Animated GIFS are usually only used with simple illustrations because each photo increases the size of the file, which &equals; longer load times.</p>
+
+          <p>Vector images are different from bitmap images because they're resolution independent. They're created by creating points, then drawing lines between them and filling in the colors. They're still usually saved as bitmap images on the web.</p>
+
+          <p>If you ever need to replace an image, right click it and choose &ldquo;Open Image in New Tab.&rdquo; The size will appear on the actual tab.</p>
+
+          <p>The &lt;figure&gt; element is used when you want to link a photo or photos to a caption using the &lt;figcaption&gt; element within it:</p>
+          <figure>
+          <img src="Images/VanGogh600By416.jpg" alt="Painting of a tree by Van Gogh" title="Painting of a tree by Van Gogh" width="600" height="416">
+          <figcaption><i>Van Gogh is my favorite painter of all time.</i></figcaption>
+          </figure>
+        </dd>
+        </section>
+        <section>
+          <dt>Tables</dt>
+          <dd>A table is essentially a grid. You enter in one cell of one row at a time. &lt;tr&gt; means table row, &lt;td&gt; means table data (each cell), and &lt;th&gt; means table heading. You can use the scope attribute within the table header element, and make sure to fill in even empty cells. For example: <br>
+          <img src="Images/table.png" alt="Hours worked to dollars earned" title="Hours worked to dollars earned" width="302" height="277">
+            <table>
+            <tr>
+            	<th></th>
+            	<th scope=“col”>Monday</th>
+            	<th scope=“col”>Tuesday</th>
+            </tr>
+            <tr>
+            	<th scope=“row”>Hours Worked</th>
+            	<td>8</td>
+            	<td>12</td>
+            </tr>
+            <tr>
+            	<th scope=“row”>Dollars earned</th>
+            	<td>$160</td>
+            	<td>$240</td>
+            </tr>
+            </table>
+            <p>If you need to span across multiple columns (like if you're drawing a schedule), use the attribute, colspan&equals;&ldquo;#of columns.&rdquo; If you need to span multiple rows, use rowspan&equals;&ldquo;#of rows.&rdquo; If you need to make a long table, wrap the entire header in &lt;thead&gt;, the body in &lt;tbody&gt;, and the footer in &lt;tfoot&gt;.</p>
+          </dd>
+          <section>
+          <section>
+            <dt>Forms</dt>
+              <dd>The &lt;form&gt; element typically has three attributes: (1) action (2) method (3) id.</dd>
+              <p>The value of the action attribute is a URL to the site on the server that'll be receiving the collected data. The value of the method attribute is either &rdquo;get&ldquo; or &rdquo;post.&ldquo; Use the first for short forms, and the second for longer forms that may have sensitive data.</p>
+              <p>The &lt;label&gt; element is used for the visually-impaired and can be used in two ways:
+              <br>
+              (1) To surround the text description <i>and</i> the &lt;input&gt; element:
+              <p>&lt;form action&equals;&quot;(URL to page receiving the data on server); method&equals;&quot;post&quot;&gt;
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;username:
+              <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type&equals;&quot;text&quot; name&equals;&quot;username&quot; maxlength&equals;&quot;10&quot;&gt;
+              <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;
+              <p>This results in . . . </p>
+              <form action="http://127.0.0.1:3000/Form%20Example/form.html" method="post">
+                <label>username:
+                  <input type="text" name="username" maxlength="10" />
+                </label>
+
+              <p>(2) To show which form control it labels, using the for attribute:
+                <br><br>
+
+                &lt;p&gt;Please select the greatest sci-fi movie of all time:
+                <br>
+                &lt;input id&equals;&quot;Matrix&quot; type&equals;&quot;radio&quot; name&equals;&quot;movie selection&quot; value &equals;&quot;The Matrix&quot; checked&equals;&quot;checked&quot;&gt;
+                <br>
+                &lt;label for&equals;&quot;Matrix&quot;&gt;The Matrix&lt;&sol;label&gt;
+                <br>
+                &lt;input id&equals;&quot;Blade&quot; type&equals;&quot;radio&quot; name&equals;&quot;movie selection&quot; value &equals;&quot;Blade Runner&quot;&gt;
+                <br>&lt;label for&equals;&quot;Blade&quot;&gt;Blade Runner&lt;&sol;label&gt;
+                <br>&lt;input id&equals;&quot;Space&quot; type&equals;&quot;radio&quot; name&equals;&quot;movie selection&quot; value &equals;&quot;Space Odessey&quot;&gt;
+                <br>&lt;label for&equals;&quot;Space&quot;&gt;Space Odessey&lt;&sol;label&gt;
+                <br>
+                &lt;&sol;p&gt;
+              </p>
+              <p>This give you . . . </p>
+
+              <p>Please select the greatest sci-fi movie of all time:
+                <br />
+                <input id="Matrix" type="radio" name="movie selection" value ="The Matrix" checked="checked">
+                <label for="Matrix">The Matrix</label>
+                <input id="Blade" type="radio" name="movie selection" value ="Blade Runner">
+                <label for="Blade">Blade Runner</label>
+                <input id="Space" type="radio" name="movie selection" value ="Space Odessey"> <label for="Space">Space Odessey</label>
+              </p>
+                <p>password:
+                  <input type="password" name="password" maxlength="20">
+                </p>
+                <p>The &lt;fieldset&gt; element can group form controls together:
+                <fieldset>
+                  <legend>Sci Fi Questionaire</legend>
+                  <p>Was Ryan Gosling human in Blade Runner?</p>
+                    <textarea name="theories" placeholder="Enter Your Theory . . ."></textarea>
+                  <p>Please select the greatest sci-fi movie(s) of all time:
+                      <br />
+                      <input type="checkbox" name="movie selections" value ="The Matrix" checked="checked" /> The Matrix
+                      <input type="checkbox" name="movie selections" value ="Blade Runner" /> Blade Runner
+                      <input type="checkbox" name="movie selections" value ="Space Odessey" /> Space Odessey
+                    </p>
+                    <p>What is the greatest sci-fi movie of all time?</p>
+                      <select name="movie choice">
+                        <option value="The Matrix">The Matrix</option>
+                        <option value="Blade Runner">Blade Runner</option>
+                        <option value="Moon">Moon</option>
+                        <option value="Aquabats" selected="selected">Aquabats</option>
+                      </select>
+                      <p>What are the greatest sci-fi movie(s) of all time?</p>
+                        <select name="movie choice" multiple="multiple">
+                          <option value="The Matrix">The Matrix</option>
+                          <option value="Blade Runner">Blade Runner</option>
+                          <option value="Moon">Moon</option>
+                        </select>
+                    </fieldset>
+                    <p>Upload your cute animal pictures below:</p>
+                      <input type="file" name="Animal Picture"><br>
+                      <input type="submit" value="Upload">
+                    <p>Subscribe to our e-mail list:</p>
+                      <input type="text" name="email">
+                      <input type="submit" name="subscribe" value="SEND ME YOUR EMAIL!!">
+                    <p>Check out this freaking button!</p>
+                      <button><img src="Images/plus.png" alt="add">Add</button>
+                    <br>
+                    <p>The below were introduced in HTML 5. Browsers that do not support them will treat them as normal text boxes.</p>
+                    <label for="depart">Departure Date:</label>
+                    <input type="date" name="depart">
+                    <input type="submit" value="Submit Departure Date">
+                    <p>Enter your e-mail address, foo!</p>
+                    <input type="email" name="email">
+                    <input type="submit" value="Submit">
+                    <p>Enter your website, foo!</p>
+                    <input type="url" name="website">
+                    <input type="submit" value="Submit">
+                    <p>What do you want to find on this site? !! GHOST TEXT IS WRITTEN USING THE &lt;placeholder&gt; ELEMENT.</p>
+                    <input type="search" name="search" placeholder="Enter Keyword">
+                    <input type="submit" value="Search">
+                  </form>
+          </section>
+          <section>
+            <h2>Adding Video</h2>
+            <p class="indent">There are two ways: (1) Embedding the video from another site, (2) hosting the video on your own site. You can be charged extra for uploading lots of data to your site, but YouTube may run ads.</p>
+            <p class="indent">If you host it on your own site, you can use the &lt;video&gt; tag. Some common attributes are . . .
+              <ul>
+                <li>src&mdash;to give the path to the video, just like you would with a picture.</li>
+                <li>poster&mdash;the picture you want displayed while your videos is <i>not</i> playing.</li>
+                <li>width and height&mdash;you can find the dimensions by clicking &ldquo;get info&rdquo; on the video file.</li>
+                <li>preload&mdash;tells the browser when to download the video (none vs auto vs metadata)</li>
+                <li>loop&mdash;duh.</li>
+                <li>controls&mdash;tells the browser to supply its own controls for playback. If you don't include this, users may not be able to play the video.</li>
+                <li>autoplay&mdash;Yep.</li>
+              </ul>
+            </p>
+            <video src="Videos/Teags_Praying.mp4" poster="Images/Vid_poster.jpg" width="288" height="384" preload="none" controls>
+            <p>A video of Teagan praying at her school</p>
+            </video>
+            <p class="indent">To embed from YouTube, right click on the video and choose, &rdquo;copy embed code.&ldquo; You can then customize the width and height.</p>
+            <iframe width="610" height="342.86" src="https://www.youtube.com/embed/1Fz_rLpPOG8" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen>
+            </iframe>
+            <h2>Adding Audio</h2>
+            <p>Just like with videos, you can either embed or host your own audio. The attributes are the same, except for poster. Make sure to add some text in case the browser does not support the HTML5 audio element.</p>
+            <audio src="Audio/09 Beyond the Blue.mp3" preload="none" controls>
+            <p>This browser does not support our audio format</p>
+            </audio>
+            <p>To embed from another site, just copy the embed code and then tweak as necessary.</p>
+            <iframe width="50%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/348949343&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+          </section>
+          <dt>Random Goodies</dt>
+          <dd>
+            <ul>
+              <li>To add a horizontal line (or horizontal ruler), type in &lt;hr&gt; (older versions of html required this tag to be self closing: &lt;hr&nbsp;&sol;&gt;)<hr></li>
+              <li>To add a line break . . . <br />. . . type &lt;br&gt;</li>
+              <li>You would write E&equals;MC<sup>2</sup> like this.</li>
+              <li>You would write H<sub>2</sub>0 like this.</li>
+              <li>Abbreviations and acronyms are written with the &lt;abbr&gt; tag. For example: <abbr title="Doctor">Dr. </abbr>Jordan B. Peterson, or <abbr title="National Aeronautics and Space Administration">NASA</abbr>.</li>
+              <li>There are three ways to write quotes.
+                <ol>
+                  <li>Use the &amp;ldquo; and &amp;rdquo named character entities.</li>
+                  <li>Use the &lt;q&gt; tag. This is for when the quote is within a paragraph.</li>
+                  <li>Use the &lt;blockquote&gt; tag. This is for when the quote takes up an entire paragraph.
+                    <ul>
+                      <li>Both #2 and #3 can use the cite attribute to cite where the quote is from. The value of the cite attribute is a link with a URL with more info on where the quote came from (ex: Wikipedia).</li>
+                  </li>
+                </ol>
+              </li>
+              <li>You can use the &lt;ins&gt; and &lt;del&gt; tags like this: Ramen was the <del>best</del> <ins>worst</ins> idea ever.</li>
+              <li>When you put a tag withing another tag&mdash;like<b> this</b>&mdash;it's called nesting.</li>
+              <li>A global attribute (such as id or class) can be used on any element.</li>
+              <li>You can cut a hole in the screen with the &lt;iframe&gt; element. It requires width, height, and src (the link to the page you're viewing):
+              <br>
+              <iframe width="400" height="400" src="https://i.redd.it/5hst5m18ck101.jpg"></iframe></li>
+            </ul>
+          </dd>
+          </section>
+          <section>
+          <dt>Semantics</dt>
+          <dd>Semantics structuring, or page structure, is by far the most boring part of html. Here's the dilly . . .
+            <ul>
+                <li>&lt;header role&equals;&ldquo;banner&rdquo;&gt; goes in front of any introductory information. Only use the role once, but use the header tag as much as you need. </li>
+                <li>&lt;nav role&equals;&ldquo;navigation&rdquo;&gt; goes in front of the navigation section (links to other parts of the site)</li>
+                <li>&lt;main role&equals;&ldquo;main&rdquo;&gt; goes in front of the meat and potatoes, or the main content of the site. In this site, it's all main because it's all important</li>
+                <li>&lt;article role&equals;&ldquo;article&rdquo;&gt; is for any section that can stand on its own. Can you post it by itself as a website? Then use article. In this site, I used it for everything because it's all within the context of learning HTML.</li>
+                <li>&lt;section&gt; is for any section that you would put in an outline, but that cannot stand on its own.</li>
+                <li>&lt;div&gt; is for any section that has no semantic meaning. It is considered an anonymous tag and allows you to group a set of elements together. It is a block level element, so when you use it, the content will appear on the next line. People often add comments after the closing &lt;div&gt; tag. For example, &lt;&sol;div&gt;&lt;! &ndash; &ndash; end of comment section &ndash; &ndash;&gt;<strong>
+                <br>
+                You can add semantic meaning to div tags by adding class or Id articles. Ids can only be used once and should start with either an underscore or a letter. Classes can be used multiple times and the name usually hints at what its use is (ex:class&equals;&ldquo;important&rdquo;). You can assign more than one class to the same element by separating them with spaces.</strong></li>
+                <li>&lt;span&gt; is just like &lt;div&gt;, but is inline. It usually contains an id or class attribute so it can be used with CSS.</li>
+                <li>&lt;aside&equals;&ldquo;complementary&rdquo;&gt; is for related content that is somewhat separate from the main content of the page. For example: sidebars, quotes, or ads. </li>
+                <li>&lt;footer role&equals;&ldquo;content info&rdquo;&gt;is for the end section, where you may include &copy;TonyDaltorio, or your <a href="mailto:adaltorio100@yahoo.com" title="my email">contact info</a> (although he cautioned against adding your contact e-mail like this). </li>
+              </ul>
+          </section>
+          <section>
+            <dt>Internet Terms You Should Know</dt>(I used the span attribute to change the size of one word only below)
+                <div class="indent">
+                <dd>&bull;&nbsp;<span class="terms">URL&mdash;</span>Uniform Resource Locator</dd>
+                <dd>&bull;&nbsp;<span class="terms">CSS&mdash;</span>Cascading Style Sheet</dd>
+                <dd>&bull;&nbsp;<span class="terms">HTML&mdash;</span>Hypertext Markup Language</dd>
+                <dd>&bull;&nbsp;<span class="terms">IP Address&mdash;</span>Internet Protocol Address</dd>
+                <dd>&bull;&nbsp;<span class="terms">DNS&mdash;</span>Domain Name System (a type of server that basically acts like an IP address phone book).</dd>
+                <dd>&bull;&nbsp;<span class="terms">ENCODING&mdash;</span>Converting a video into another format.</dd>
+                </div>
+          </section>
+</html>

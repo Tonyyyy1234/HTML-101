@@ -1,0 +1,58 @@
+/*body {
+      background-image: url(JobsStencil.jpg);
+      background-position: 30% 0px;
+      }*/
+body {
+      background-image: url(Images/JobsStencil4.jpg);
+      background-size: cover;
+      background-position: 20% 0px;
+      background-attachment: fixed;
+      }
+h1 {
+    text-align:center;
+    }
+dt {
+    font-weight: bold;
+    font-style:italic;
+    font-size: 2em;
+    }
+h2 {
+    font-weight: bold;
+    font-style:italic;
+    font-size: 2em;
+    }
+a:link {
+        color:#2b40d8;
+        }
+
+a:visited {
+          color:#2b40d8;
+          }
+a:hover {
+        color:#b82828;
+        }
+.tabHead {
+          font-weight: bold;
+          font-size: 1.5em;
+         }
+.floatRight {
+            float: right;
+            margin:30px;
+            }
+/*this was possible
+dd dl dt {
+         font-size:1.3em;
+         font-style: normal
+         }
+*/
+.terms {
+        font-size:1.5em;
+        }
+.indent {
+        text-indent:25px;
+        }
+
+abbr {
+  border-bottom: none;;
+  text-decoration: none;
+}
